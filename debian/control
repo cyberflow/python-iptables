@@ -2,9 +2,8 @@ Source: python-iptables
 Section: net
 Priority: extra
 Maintainer: Juliano Martinez <juliano@martinez.io>
-Build-depends: python-all-dev (>= 2.7), python-all-dbg (>= 2.7), python3-all-dev (>= 3.2), python3-all-dbg, debhelper (>= 7), python-setuptools
+Build-depends: python-all-dev (>= 2.7), python-all-dbg (>= 2.7), debhelper (>= 7), python-setuptools
 X-Python-Version: >= 2.7
-X-Python3-Version: >= 3.2
 Standards-Version: 3.8.4
 Homepage: https://github.com/ldx/python-iptables
 
@@ -26,15 +25,3 @@ Architecture: any
 Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, python-iptables (= ${binary:Version})
 Provides: ${python:Provides}
 Description: Python bindings for iptables
-
-Package: python3-iptables
-Architecture: any
-Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}
-Description: Python3 bindings for iptables
-
-Package: python3-iptables-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}, python3-iptables (= ${binary:Version})
-Description: Python3 bindings for iptables
